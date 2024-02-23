@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import Navigation from './components/molecules/Navigation';
 import Form from './components/molecules/Form';
 
