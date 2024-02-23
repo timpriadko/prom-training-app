@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import styles from './Form.module.scss'
+
 const UserRegistrationForm: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -48,8 +50,8 @@ const UserRegistrationForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <div className={styles.input_block}>
         <label htmlFor="firstName">First Name:</label>
         <input
           type="text"
@@ -58,10 +60,9 @@ const UserRegistrationForm: React.FC = () => {
           value={formData.firstName}
           onChange={handleInputChange}
           required
-          className='border-solid border-2 border-indigo-600 rounded-md'
         />
       </div>
-      <div>
+      <div className={styles.input_block}>
         <label htmlFor="lastName">Last Name:</label>
         <input
           type="text"
@@ -70,10 +71,9 @@ const UserRegistrationForm: React.FC = () => {
           value={formData.lastName}
           onChange={handleInputChange}
           required
-          className='border-solid border-2 border-indigo-600 rounded-md'
         />
       </div>
-      <div>
+      <div className={styles.input_block}>
         <label htmlFor="email">Email:</label>
         <input
           type="text"
@@ -82,10 +82,9 @@ const UserRegistrationForm: React.FC = () => {
           value={formData.email}
           onChange={handleInputChange}
           required
-          className='border-solid border-2 border-indigo-600 rounded-md'
         />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" className='block mx-auto my-3'>Submit</button>
     </form>
   );
 };
