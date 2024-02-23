@@ -4,5 +4,9 @@
     "lib": ["DOM", "ES2022"],
     "moduleResolution": "node",
     "target": "ES2022"
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "declarations.d.ts"
+  ]
 }
